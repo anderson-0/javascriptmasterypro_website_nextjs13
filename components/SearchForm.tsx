@@ -4,8 +4,8 @@ import { Input } from './ui/input'
 
 const SearchForm = () => {
   return (
-    <form className='flex-center mx-auto mt-10 w-full'>
-      <label className=''>
+    <form className='flex-center mx-auto mt-10 w-full sm:mt-10 sm:px-5'>
+      <label className='flex-center relative w-full max-w-3xl'>
         <Image src='/magnifying-glass.svg' className='absolute left-8' alt='search icon' width={32} height={32} />
         <Input
           className='base-regular h-fit border-0 bg-black-400
