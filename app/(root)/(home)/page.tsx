@@ -1,3 +1,4 @@
+import Filters from '@/components/Filters'
 import SearchForm from '@/components/SearchForm'
 import React from 'react'
 
@@ -9,6 +10,7 @@ const Home = () => {
           <h1 className='sm:heading1 heading2 mb-6 text-white'>Javascript Mastery Resources</h1>
         </div>
         <SearchForm/>
+        <Filters/>
       </section>
     </main>
   )
