@@ -30,51 +30,51 @@
   }
 
   .heading2 {
-    @apply font-bold text-[48px] leading-[50.4px];
+    @apply text-[48px] leading-[50.4px] font-bold;
   }
 
   .heading3 {
-    @apply font-bold sm:text-[32px] sm:leading-[33.6px] text-[28px] leading-[40px] tracking-[-0.25%];
+    @apply sm:text-[32px] text-[28px] sm:leading-[33.6px] leading-[40px] tracking-[-0.25%] font-bold;
   }
 
   .base-regular {
-    @apply text-[24px] font-normal leading-[31.2px];
+    @apply text-[24px] leading-[31.2px] font-normal;
   }
 
   .base-bold {
-    @apply text-[24px] font-semibold leading-[31.2px];
+    @apply text-[24px] leading-[31.2px] font-semibold;
   }
 
   .paragraph-regular {
-    @apply text-[20px] font-normal leading-[26px];
+    @apply text-[20px] leading-[26px] font-normal;
   }
 
   .paragraph-semibold {
-    @apply text-[20px] font-semibold leading-[26px];
+    @apply text-[20px] leading-[26px] font-semibold;
   }
 
   .body-regular {
-    @apply text-[16px] font-normal leading-[20.8px];
+    @apply text-[16px] leading-[20.8px] font-normal;
   }
 
   .body-semibold {
-    @apply text-[16px] font-semibold leading-[20.8px];
+    @apply text-[16px] leading-[20.8px] font-semibold;
   }
 
   .body-medium {
-    @apply text-[16px] font-medium leading-[22.4px];
+    @apply text-[16px] leading-[22.4px] font-medium;
   }
 
   .small-regular {
-    @apply text-[14px] font-normal leading-[17.5px];
+    @apply text-[14px] leading-[17.5px] font-normal;
   }
 
   .small-bold {
-    @apply text-[14px] font-semibold leading-[17.5px];
+    @apply text-[14px] leading-[17.5px] font-semibold;
   }
 
   .heading4 {
-    @apply font-semibold text-[20px] leading-[26px] tracking-[0.25%];
+    @apply text-[20px] leading-[26px] tracking-[0.25%] font-semibold;
   }
 
   .body-text {
