@@ -7,7 +7,12 @@ import React from 'react'
 
 export const revalidate = 900; // 15 minutes
 
-const Home = async () => {
+interface HomeProps {
+  searchParams: { [key: string]: string};
+}
+
+const Home = async ({ searchParams }: HomeProps) => {
+  console.log(searchParams)
   const resources = await getResources({
     query: '',
     category: '',
