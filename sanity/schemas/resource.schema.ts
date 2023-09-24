@@ -1,4 +1,4 @@
-export const resource = {
+const schema = {
   name: 'resource',
   title: 'Resource',
   type: 'document',
@@ -8,26 +8,23 @@ export const resource = {
       title: 'Title',
       type: 'string',
       require,
-      validation: (Rule: any) => Rule.required(),
+      validation: (Rule: any) => Rule.required()
     },
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 200,
-      },
+      options: { source: 'title' }
     },
     {
       name: 'downloadLink',
       title: 'Download Link',
       type: 'url',
-      validation: (Rule: any) => Rule.required(),
+      validation: (Rule: any) => Rule.required()
     },
     {
-      title: 'views',
-      name: 'Views',
+      name: 'views',
+      title: 'Views',
       type: 'number',
       initialValue: 0,
     },
@@ -38,7 +35,7 @@ export const resource = {
       validation: (Rule: any) => Rule.required(),
       options: {
         hotspot: true,
-      },
+      }
     },
     {
       name: 'category',
@@ -46,10 +43,10 @@ export const resource = {
       type: 'string',
       validation: (Rule: any) => Rule.required(),
       options: {
-        list: [
-          'frontend', 'backend', 'next 13', 'fullstack', 'others'
-        ],
-      },
+        list: ['frontend', 'backend', 'next 13', 'fullstack', 'other']
+      }
     }
   ]
 }
+
+export default schema;
