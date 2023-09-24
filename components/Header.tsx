@@ -2,12 +2,11 @@
 import React from 'react'
 
 interface HeaderProps {
-  type: string;
   query: string;
   category: string;
 }
 
-const Header = ({ type, query, category }: HeaderProps) => {
+const Header = ({ query, category }: HeaderProps) => {
   if (query && category) {
     return (
       <h1 className='heading3 self-start text-white-800'>
