@@ -2,8 +2,6 @@ import React from 'react'
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -18,15 +16,19 @@ interface ResourceCardProps {
   downloadLink: string;
 }
 
-const ResourceCard = ({id, title, image, downloadNumber, downloadLink }: ResourceCardProps) => {
+const ResourceCard = ({ id, title, image, downloadNumber, downloadLink }: ResourceCardProps) => {
   return (
     <Card className="w-full max-w-fit border-0 !bg-transparent sm:max-w-[356px]">
       <Link href={downloadLink} target='_blank'>
         <CardHeader className='flex-center flex-col gap-2.5 p-0!'>
           <div className='h-fit w-full'>
             <Image
+              src={image}
               className='h-full rounded-md object-cover'
-              src={image} alt={title} width={384} height={440} />
+              width={384}
+              height={440}
+              alt={title}
+            />
           </div>
           <CardTitle className='text-white paragraph-semibold
             line-clamp-1 w-full text-left'>{title}
@@ -35,7 +37,8 @@ const ResourceCard = ({id, title, image, downloadNumber, downloadLink }: Resourc
       </Link>
       <CardContent className='flex-between mt-4 p-0'>
         <div className='flex-center body-medium gap-1.5 text-white'>
-          <Image src='/downloads.svg' width={20} height={20} alt='Download' />
+          <Image
+            src='/downloads.svg' width={20} height={20} alt='Download' />
           {downloadNumber}
         </div>
       </CardContent>
