@@ -1,29 +1,26 @@
-export const resourcePlaylist = {
-  name: 'resourcePlaylist',
-  title: 'Resource Playlist',
-  type: 'document',
+const schema = {
+  name: "resourcePlaylist",
+  title: "Resource Playlist",
+  type: "document",
   fields: [
     {
-      name: 'title',
-      title: 'Playlist Title',
-      type: 'string',
-      require,
+      name: "title",
+      title: "Title",
+      type: "string",
       validation: (Rule: any) => Rule.required(),
     },
     {
-      name: 'resources',
-      title: 'Resources',
-      type: 'array',
+      name: "resources",
+      title: "Resources",
+      type: "array",
       of: [
         {
-          type: 'reference',
-          to: [
-            {
-              type: 'resource'
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+          type: "reference",
+          to: [{ type: "resource" }],
+        },
+      ],
+    },
+  ],
+};
+
+export default schema;
