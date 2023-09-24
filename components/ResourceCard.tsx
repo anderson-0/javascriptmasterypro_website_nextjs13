@@ -15,29 +15,30 @@ interface ResourceCardProps {
   title: string;
   image: string;
   downloadNumber: number;
-  slug: string;
+  downloadLink: string;
 }
 
-const ResourceCard = ({id, title, image, downloadNumber, slug}: ResourceCardProps) => {
+const ResourceCard = ({id, title, image, downloadNumber, downloadLink }: ResourceCardProps) => {
   return (
-    <Card className='w-full max-w-fit border-0 !bg-transparent sm:max-w-[356px]'>
-      <Link href={`/resource/${id}`}>
-        <CardHeader>
-          <div>
+    <Card className="w-full max-w-fit border-0 !bg-transparent sm:max-w-[356px]">
+      <Link href={downloadLink} target='_blank'>
+        <CardHeader className='flex-center flex-col gap-2.5 p-0!'>
+          <div className='h-fit w-full'>
             <Image
               className='h-full rounded-md object-cover'
               src={image} alt={title} width={384} height={440} />
           </div>
-          <CardTitle>Card Title</CardTitle>
-          <CardDescription>Card Description</CardDescription>
+          <CardTitle className='text-white paragraph-semibold
+            line-clamp-1 w-full text-left'>{title}
+          </CardTitle>
         </CardHeader>
       </Link>
-      <CardContent>
-        <p>Card Content</p>
+      <CardContent className='flex-between mt-4 p-0'>
+        <div className='flex-center body-medium gap-1.5 text-white'>
+          <Image src='/downloads.svg' width={20} height={20} alt='Download' />
+          {downloadNumber}
+        </div>
       </CardContent>
-      <CardFooter>
-        <p>Card Footer</p>
-      </CardFooter>
     </Card>
   )
 }

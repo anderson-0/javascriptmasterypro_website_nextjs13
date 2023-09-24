@@ -28,9 +28,10 @@ const Home = async () => {
                 <ResourceCard
                   key={resource._id}
                   title={resource.title}
+                  id={resource._id}
                   image={resource.image}
                   downloadNumber={resource.views}
-                  slug={resource._id} _id={''}
+                  downloadLink={resource.downloadLink}
                 />
               ))
             ): (
