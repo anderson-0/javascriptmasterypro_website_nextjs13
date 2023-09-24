@@ -15,17 +15,21 @@ const Filters = () => {
     let value = null;
     if (active === link) {
       setActive('');
-      
+      newUrl = formUrlQuery({
+        params: searchParams.toString(),
+        keysToRemove: ['category'],
+        value: null
+      })
     } else {
       setActive(link);
-      value = link.toLowerCase();
+      newUrl = formUrlQuery({
+        params: searchParams.toString(),
+        key: 'category',
+        value: link.toLowerCase()
+      })
     }
     
-    newUrl = formUrlQuery({
-      params: searchParams.toString(),
-      key: 'category',
-      value
-    })
+    
     console.log(newUrl)
     router.push(newUrl, { scroll: false })
   }
