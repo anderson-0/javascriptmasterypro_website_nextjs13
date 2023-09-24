@@ -12,13 +12,11 @@ interface HomeProps {
 }
 
 const Home = async ({ searchParams }: HomeProps) => {
-  console.log(searchParams)
   const resources = await getResources({
-    query: '',
-    category: '',
+    query: searchParams?.query || '',
+    category: searchParams?.category || '',
     page: '1'
   });
-  console.log(resources);
   return (
     <main className='flex-center paddings mx-auto w-full max-w-screen-2xl flex-column'>
       <section className='nav-padding w-full'>
